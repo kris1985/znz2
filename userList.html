@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>指南针</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script >
+	$(function(){
+		
+	})
+	</script>
+  </head>
+
+  <body>
+
+    <div class="container">
+    
+     <form class="form-horizontal" role="form">
+	 <div class="row">
+	<div class="col-sm-6 col-xs-6"> <button type="button" class="btn btn-primary btn-sm" onclick="javascript:window.location='userAdd.html'">新增用户</button></div>
+		<div class="col-sm-6 col-xs-6"><div class="input-group">
+						  <input type="text" class="form-control" placeholder="搜索">
+						  
+						  <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+						</div></div>
+	 </div>
+	 
+<table class="table">
+      <thead>
+        <tr>
+          
+          <th>用户名</th>
+          <th>当日下载</th>
+          <th>总下载</th>
+		  <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active">
+         
+          <td>意尔康</td>
+          <td>56</td>
+          <td>1250</td>
+		  <td><button type="button" class="btn btn-primary btn-xs">删除</button>
+		  <button type="button" class="btn btn-primary btn-xs">修改</button>
+		  <button type="button" class="btn btn-primary btn-xs">权限</button>
+		  </td>
+        </tr>
+         <tr >
+         
+          <td>意尔康</td>
+          <td>56</td>
+          <td>1250</td>
+		  <td><button type="button" class="btn btn-primary btn-xs">删除</button>
+		  <button type="button" class="btn btn-primary btn-xs">修改</button>
+		  <button type="button" class="btn btn-primary btn-xs">权限</button>
+		  </td>
+        </tr>
+    <tr class="active">
+       
+          <td>意尔康</td>
+          <td>56</td>
+          <td>1250</td>
+		  <td><button type="button" class="btn btn-primary btn-xs">删除</button>
+		  <button type="button" class="btn btn-primary btn-xs">修改</button>
+		  <button type="button" class="btn btn-primary btn-xs">权限</button>
+		  </td>
+        </tr>
+      </tbody>
+    </table>
+	
+	<nav>
+  <ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</nav>
+     </form>
+
+
+    </div> <!-- /container -->
+
+
+  </body>
+</html>
