@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="js/themes/default/style.min.css" />
     <link rel="stylesheet" href="css/file.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/smartMenu.css">
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-latest.js"></script>
@@ -16,10 +17,73 @@
 	<script type="text/javascript" src="js/jstree.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-	
+	<script src="js/jquery-smartMenu-min.js"></script>
 
 	<script type="text/javascript">
+var imageMenuData = [
+    [{
+        text: "图片描边",
+        data: [[{
+            text: "5像素深蓝",
+            func: function() {
+                $(this).css("border", "5px solid #34538b");
+            }
+        }, {
+            text: "5像素浅蓝",
+            func: function() {
+                $(this).css("border", "5px solid #a0b3d6");
+            }
+        }, {
+            text: "5像素淡蓝",
+            func: function() {
+                $(this).css("border", "5px solid #cad5eb");
+            }
+        }]]
+    }, {
+        text: "图片内间距",
+        func: function() {
+            $(this).css("padding", "10px");
+        }
+    }, {
+        text: "图片背景色",
+        func: function() {
+            $(this).css("background-color", "#beceeb");
+        }
+    }],
+    [{
+        text: "查看原图",
+        func: function() {
+            var src = $(this).attr("src");
+            window.open(src.replace("/s512", ""));
+        }
+    }]
+];
+
+var bodyMenuData = [
+    [{
+        text: "上传",
+        data: [[{
+            text: "上传-覆盖",
+            func: function() {
+                $(this).css("border", "5px solid #34538b");
+            }
+        }, {
+            text: "上传-忽略",
+            func: function() {
+               // $(this).css("border", "5px solid #a0b3d6");
+            }
+        }]]
+    }, {
+        text: "新建文件夹",
+        func: function() {
+            //$(this).css("padding", "10px");
+        }
+    }]
+];
+
+
 $(function(){
+
 		$('#jstree').jstree({
         'plugins': ["wholerow"]
        
@@ -36,10 +100,21 @@ $(function(){
     });**/
 	var sclHeight = 460;
 
+	//左边滚动条
 	$("#left_container").mCustomScrollbar({
 					setHeight:sclHeight,
 					theme:"inset-2-dark"
 	});
+	
+	$(".folder_wrap").smartMenu(imageMenuData, {
+		name: "image"    
+	});
+	/**$("#file-content").smartMenu(bodyMenuData, {
+		name: "image1"    
+	});
+	$("#child_node_1_2").smartMenu(imageMenuData, {
+		name: "image1"    
+	});**/
 });
 	
 	</script>
@@ -69,7 +144,7 @@ $(function(){
 	</style>
 
 <div id="container">
-	<div class="pane ui-layout-center">
+	<div class="pane ui-layout-center" id="file-content">
 		<div class="folder_wrap">
 				<div class="folder_img"><img src="img/folder.png" width="256" height="256"></div>
 				<div class="folder_txt">女凉 14090820VIP 休闲-成行底1111111111111111</div>
