@@ -26,9 +26,27 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	
 	<script >
+	var pieData = [
+				{
+					value: 300.25,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "已使用"
+				},
+			
+				{
+					value: 120.90,
+					color: "green",
+					highlight: "#616774",
+					label: "可用"
+				}
+			];
 	$(function(){
-		//$(".form-signin").show(1000)
+		var ctx = document.getElementById("chart-area").getContext("2d");
+		window.myPie = new Chart(ctx).Pie(pieData);
 	})
 	</script>
   </head>
@@ -36,7 +54,25 @@
   <body>
 
     <div class="container">
- <img src="img/disc.jpg">
+		<div id="canvas-holder" style="width:300px;margin:0 auto">
+			<canvas id="chart-area" width="300" height="300"/>
+			
+			
+		</div>
+		<div class="descriptions" style="width:300px;margin:0 auto">
+			<table width="60%" border="0" align="center">
+				<tr>
+					<td height="30">已使用</td>
+					<td align="center" ><div style="width:16px;height:16px;background:red;text-indent:-9999"></div></td>
+					<td>&nbsp;&nbsp;300.25GB</td>
+				</tr>
+				<tr>
+					<td height="30">可用</td>
+					<td align="center" ><div style="width:16px;height:16px;background:green;text-indent:-9999"></div></td>
+					<td>&nbsp;&nbsp;120.90GB</td>
+				</tr>
+			</table>
+			</div>
 
     </div> <!-- /container -->
 
