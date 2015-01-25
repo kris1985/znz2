@@ -1317,10 +1317,16 @@ Windows = function(me){
 					});
 					
 				}else{
-				var width="100%",height="100%";
+				var width="80%",height="90%";
 				    if(id==18){
-					 width = "60%";
-					 height = "80%"
+						width = "60%";
+						height = "80%"
+					}else if(id==19){
+						width = "50%";
+						height = "60%"
+					}else if(id==20){
+						width = "50%";
+						height = "60%"
 					}
 					art.dialog.open(url,/** 弹出ART窗体*/
 						{   
