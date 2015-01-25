@@ -96,7 +96,7 @@
 			asc:6
 		},
 		'disk':{
-			appid:'20',
+			appid:'19',
 			icon:'wangdesk.png',
 			name:'磁盘空间',
 			url:'disk.html',
@@ -104,14 +104,14 @@
 			asc:7
 		},
 		'theme':{
-			appid:'21',
+			appid:'20',
 			icon:'icon0.png',
 			name:'设置主题',
 			url:'theme.html',
 			asc:9
 		},
 		'folder':{
-			appid:'514',
+			appid:'21',
 			icon:'folder_o.png',
 			name:'资料管理',
 			url:'files.html',

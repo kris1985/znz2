@@ -29,7 +29,7 @@ USE `znz`;
 --
 
 CREATE TABLE IF NOT EXISTS `t_user` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) auto_increment NOT NULL,
   `user_name` varchar(64) NOT NULL,
   `pwd` varchar(16) NOT NULL,
   `company` varchar(64) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `t_user` (
 --
 
 CREATE TABLE IF NOT EXISTS `t_user_auth` (
-  `id` int(11) NOT NULL,
+  `id` int(11) auto_increment NOT NULL,
   `user_id` int(11) NOT NULL,
   `file_path` varchar(240) NOT NULL,
   `create_time` datetime NOT NULL,

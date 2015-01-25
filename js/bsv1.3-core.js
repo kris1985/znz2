@@ -1317,12 +1317,17 @@ Windows = function(me){
 					});
 					
 				}else{
+				var width="100%",height="100%";
+				    if(id==18){
+					 width = "60%";
+					 height = "80%"
+					}
 					art.dialog.open(url,/** 弹出ART窗体*/
 						{   
 							"id" :id,
 							title: title,	
-							width:"100%",//设置窗口宽度自动适应width
-							height:"100%",
+							width:width,//设置窗口宽度自动适应width
+							height:height,
 							close:function(){
 								me.closeMinTask(id);
 								$("#sonfile_a"+id).remove();
