@@ -190,14 +190,15 @@ $(".fixedBtns li").hover(function(){
 	            Album.prev();	
 				evt.preventDefault();
 				evt.stopPropagation();
-				$("#album-image").get(0).style.zoom='normal';
+				back2Normal();
 	})
 	$("#nextBtn").click(function(evt){
 			    
 	            Album.next();
 				evt.preventDefault();
 				evt.stopPropagation();
-				$("#album-image").get(0).style.zoom='normal';
+				back2Normal();
+				
 	})
 	$("#thumbBtn").click(function(){
 	    // height = $("#album-image-md").height();

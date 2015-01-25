@@ -1,6 +1,11 @@
 /**
  * @author Yaohaixiao
  */
+ function back2Normal(){
+ $("#album-image").get(0).style.zoom='normal';		
+ $("#album-image").css({"margin-top":-$("#album-image").height()/2,"margin-left":-$("#album-image").width()/2});
+ $("#album-image").css({"left":"50%","top":"50%"})
+ }
 (function($){
 	var CLS_SELECTED = "album-carousel-thumb-selected", 
 	    CLS_HIDE = "hide", 
@@ -42,7 +47,7 @@
 			// 大图片显示区域的最大宽度
 			maxWidth: 1366,
 			// 大图片显示区域的最高宽度
-			maxHeight: 768
+			maxHeight: 600
 		};
 		
 		// 合并用户配置项和默认配置项
@@ -216,7 +221,7 @@
 			}
 			
 			this.select().change();
-			$("#album-image").get(0).style.zoom='normal';
+			back2Normal();
 			return this;
 		},
 		/**
@@ -243,7 +248,7 @@
 			}
 			
 			this.select().change();
-			$("#album-image").get(0).style.zoom='normal';
+			back2Normal();
 			return this;
 		},
 		prevGroup: function(){
