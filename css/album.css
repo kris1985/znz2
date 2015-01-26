@@ -140,7 +140,7 @@ cursor:pointer}
 .album-image-loading-overlay{
 	position:absolute;
 	z-index:4;
-	top:0;
+	top:-20px;
 	left:50%;
 	margin:0;
 	margin-left:-50%;
@@ -148,8 +148,9 @@ cursor:pointer}
 	height:100%;
 	background-color:#FFF;
 	opacity: 0.2;
-	filter:alpha(opacity=60);
+	filter:alpha(opacity=20);
 	overflow:hidden;
+	z-index:4;
 }
 
 .album-image-loading-overlay img{

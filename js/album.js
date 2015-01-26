@@ -6,11 +6,24 @@
  $("#album-image").css({"margin-top":-$("#album-image").height()/2,"margin-left":-$("#album-image").width()/2});
  $("#album-image").css({"left":"50%","top":"50%"})
  }
+ var maxHeight,maxWidth;
+ function initMaxWH(){
+	maxHeight = $(document).height()-60;
+	maxWidth = $(document).width();
+	w = $("#album-image").width();
+	h = $("#album-image").height();
+	if(w>h){
+		maxWidth = maxHeight*(w/h);
+	}else{
+		maxWidth = maxHeight*(h/w);
+	}
+	//alert(w+"-"+h+"-"+maxWidth+"-"+maxHeight);
+ }
 (function($){
 	var CLS_SELECTED = "album-carousel-thumb-selected", 
 	    CLS_HIDE = "hide", 
 		PX = "px";
-	
+	initMaxWH();
 	jQuery.Album = function(config){
 		this.setting = {
 			// 大图片显示区域
@@ -45,9 +58,9 @@
 			// 当前显示图片在缩略图的中索引值
 			curIndex: 0,
 			// 大图片显示区域的最大宽度
-			maxWidth: 1366,
+			maxWidth: maxWidth,
 			// 大图片显示区域的最高宽度
-			maxHeight: 600
+			maxHeight: maxHeight
 		};
 		
 		// 合并用户配置项和默认配置项
@@ -154,7 +167,7 @@
 					"width": width + PX,
 					"height": height + PX,
 					"margin-left": -(width / 2) + PX,
-					"margin-top": -(height / 2) + PX
+					"margin-top": -(height / 2)-30 + PX
 				}, 500, function(){
 					// 更新图片路径和图片alt属性
 					image.attr({
@@ -222,6 +235,7 @@
 			
 			this.select().change();
 			back2Normal();
+			//initMaxWH();
 			return this;
 		},
 		/**
@@ -249,6 +263,7 @@
 			
 			this.select().change();
 			back2Normal();
+			//initMaxWH();
 			return this;
 		},
 		prevGroup: function(){
