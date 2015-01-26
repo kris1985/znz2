@@ -3,7 +3,7 @@
  */
  function back2Normal(){
  $("#album-image").get(0).style.zoom='normal';		
- $("#album-image").css({"margin-top":-$("#album-image").height()/2,"margin-left":-$("#album-image").width()/2});
+ $("#album-image").css({"margin-top":-$("#album-image").height()/2-30,"margin-left":-$("#album-image").width()/2});
  $("#album-image").css({"left":"50%","top":"50%"})
  }
  var maxHeight,maxWidth;
