@@ -3,7 +3,7 @@
  */
  function back2Normal(){
  $("#album-image").get(0).style.zoom='normal';		
- $("#album-image").css({"margin-top":-$("#album-image").height()/2-30,"margin-left":-$("#album-image").width()/2});
+ $("#album-image").css({"margin-top":-$("#album-image").height()/2,"margin-left":-$("#album-image").width()/2});
  $("#album-image").css({"left":"50%","top":"50%"})
  }
  var maxHeight,maxWidth;
@@ -167,7 +167,7 @@
 					"width": width + PX,
 					"height": height + PX,
 					"margin-left": -(width / 2) + PX,
-					"margin-top": -(height / 2)-30 + PX
+					"margin-top": -(height / 2) + PX
 				}, 500, function(){
 					// 更新图片路径和图片alt属性
 					image.attr({
