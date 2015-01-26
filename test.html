@@ -1,0 +1,78 @@
+<html>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jstree.min.js"></script>
+<script type="text/javascript" src="jquery.jstree.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+<link rel="stylesheet" href="js/themes/default/style.min.css" />
+<link rel="stylesheet" href="css/file.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://www.orangehilldev.com/jstree-bootstrap-theme/demo/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.orangehilldev.com/jstree-bootstrap-theme/demo/assets/dist/themes/proton/style.css" />
+	<script> 
+$(document).ready(function () { 
+
+    $("#demo1").jstree({ 
+        'plugins': ["wholerow","checkbox"],
+        "core" : { 
+            "data" : [ 
+				{"id":"tree_0","parent":"#","text":"门户权限"},
+                {"id":"tree_1/znz/ee","parent":"tree_0","text":"门户权限"},
+				{"id":"tree_2","parent":"tree_0","text":"门户权限2"},
+				{"id":"tree_3","parent":"tree_2","text":"门户权限3"}
+            ] 
+        } 	
+
+    }).bind("select_node.jstree", function (event, data) {
+
+            // `data.rslt.obj` is the jquery extended node that was clicked
+			
+            console.log(data.node.text);
+
+        })//.bind("loaded.jstree", function (e, data) { $('#demo1').jstree("open_all");}); 
+		 $("#demo1").jstree('open_node', '#tree_3');
+		 
+		 
+		  $('#jstree-proton-3').jstree({
+        'plugins': ["wholerow", "checkbox","sort"],
+        'core': {
+            'data': [{
+                    "text": "Wholerow with checkboxes",
+                    "children": [{
+                        "text": "initially selected",
+                        "state": {
+                            "selected": true
+                        }
+                    }, {
+                        "text": "custom icon URL",
+                        "icon": "./assets/images/tree_icon.png"
+                    }, {
+                        "text": "initially open",
+                        "state": {
+                            "opened": true
+                        },
+                        "children": ["Another node"]
+                    }, {
+                        "text": "custom icon class",
+                        "icon": "glyphicon glyphicon-leaf"
+                    }]
+                },
+                "And wholerow selection"
+            ],
+            'themes': {
+                'name': 'proton',
+                'responsive': true
+            }
+        }
+    });
+
+}); 
+
+
+</script> 
+<body> 
+<div id="demo1" class="demo"> 
+</div> 
+<div id="jstree-proton-3" class="demo"> 
+</div> 
+</body> 
+</html>
+
