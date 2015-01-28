@@ -8,7 +8,7 @@
  }
  var maxHeight,maxWidth;
  function initMaxWH(){
-	maxHeight = $(document).height()-60;
+	maxHeight = $(document).height()-90;
 	maxWidth = $(document).width();
 	w = $("#album-image").width();
 	h = $("#album-image").height();
